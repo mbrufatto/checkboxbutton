@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		616AF0A12569452E007AF70B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616AF0A02569452E007AF70B /* AppDelegate.swift */; };
 		616AF0A32569452E007AF70B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616AF0A22569452E007AF70B /* SceneDelegate.swift */; };
-		616AF0A52569452E007AF70B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616AF0A42569452E007AF70B /* ViewController.swift */; };
-		616AF0A82569452E007AF70B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 616AF0A62569452E007AF70B /* Main.storyboard */; };
 		616AF0AA25694531007AF70B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 616AF0A925694531007AF70B /* Assets.xcassets */; };
 		616AF0AD25694531007AF70B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 616AF0AB25694531007AF70B /* LaunchScreen.storyboard */; };
+		616AF0BA25694B90007AF70B /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616AF0B925694B90007AF70B /* HomeController.swift */; };
+		616AF0BE25694BB3007AF70B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616AF0BD25694BB3007AF70B /* HomeView.swift */; };
+		616AF0C125694FAA007AF70B /* CheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616AF0C025694FAA007AF70B /* CheckBoxButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		616AF09D2569452E007AF70B /* ButtonsCNHAndTG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButtonsCNHAndTG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		616AF0A02569452E007AF70B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		616AF0A22569452E007AF70B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		616AF0A42569452E007AF70B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		616AF0A72569452E007AF70B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		616AF0A925694531007AF70B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		616AF0AC25694531007AF70B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		616AF0AE25694531007AF70B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		616AF0B925694B90007AF70B /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		616AF0BD25694BB3007AF70B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		616AF0C025694FAA007AF70B /* CheckBoxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,32 @@
 		616AF09F2569452E007AF70B /* ButtonsCNHAndTG */ = {
 			isa = PBXGroup;
 			children = (
+				616AF0B825694B5E007AF70B /* View */,
+				616AF0B725694B51007AF70B /* Controller */,
 				616AF0A02569452E007AF70B /* AppDelegate.swift */,
 				616AF0A22569452E007AF70B /* SceneDelegate.swift */,
-				616AF0A42569452E007AF70B /* ViewController.swift */,
-				616AF0A62569452E007AF70B /* Main.storyboard */,
 				616AF0A925694531007AF70B /* Assets.xcassets */,
 				616AF0AB25694531007AF70B /* LaunchScreen.storyboard */,
 				616AF0AE25694531007AF70B /* Info.plist */,
 			);
 			path = ButtonsCNHAndTG;
+			sourceTree = "<group>";
+		};
+		616AF0B725694B51007AF70B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				616AF0B925694B90007AF70B /* HomeController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		616AF0B825694B5E007AF70B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				616AF0BD25694BB3007AF70B /* HomeView.swift */,
+				616AF0C025694FAA007AF70B /* CheckBoxButton.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +145,6 @@
 			files = (
 				616AF0AD25694531007AF70B /* LaunchScreen.storyboard in Resources */,
 				616AF0AA25694531007AF70B /* Assets.xcassets in Resources */,
-				616AF0A82569452E007AF70B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +155,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				616AF0A52569452E007AF70B /* ViewController.swift in Sources */,
 				616AF0A12569452E007AF70B /* AppDelegate.swift in Sources */,
+				616AF0BE25694BB3007AF70B /* HomeView.swift in Sources */,
+				616AF0C125694FAA007AF70B /* CheckBoxButton.swift in Sources */,
 				616AF0A32569452E007AF70B /* SceneDelegate.swift in Sources */,
+				616AF0BA25694B90007AF70B /* HomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		616AF0A62569452E007AF70B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				616AF0A72569452E007AF70B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		616AF0AB25694531007AF70B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
