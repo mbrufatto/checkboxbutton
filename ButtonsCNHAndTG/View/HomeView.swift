@@ -62,9 +62,15 @@ class HomeView: UIView {
 extension HomeView: CheckBoxButtonDelegate {
     func didSelectedButton(isChecked: Bool, sender: CheckBoxButton) {
         if sender == checkButton2 {
-            print(sender.isChecked)
+            if checkButton2.isChecked {
+                checkButton.isChecked = !isChecked
+                print("RG Selected")
+            }
         } else if sender == checkButton {
-            print(sender.isChecked)
+            if checkButton.isChecked {
+                checkButton2.isChecked = !isChecked
+                print("CNH Selected")
+            }
         }
     }
 }
