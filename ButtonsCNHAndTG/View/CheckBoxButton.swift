@@ -8,9 +8,14 @@
 import Foundation
 import UIKit
 
+protocol CheckBoxButtonDelegate {
+    func didSelectedButton(isChecked: Bool, sender: CheckBoxButton)
+}
+
 class CheckBoxButton: UIButton {
     let checkedImage = UIImage(named: "ic_check_box")! as UIImage
     let uncheckedImage = UIImage(named: "ic_check_box_outline_blank")! as UIImage
+    var delegate: CheckBoxButtonDelegate?
     
     var isChecked: Bool = false {
         didSet {
@@ -43,6 +48,7 @@ class CheckBoxButton: UIButton {
     @objc func buttonClicked(sender: UIButton) {
         if sender == self {
             isChecked = !isChecked
+            delegate?.didSelectedButton(isChecked: isChecked, sender: self)
         }
     }
     

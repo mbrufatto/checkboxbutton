@@ -39,6 +39,8 @@ class HomeView: UIView {
         checkButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20).isActive = true
         checkButton.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.1).isActive = true
         checkButton.isChecked = false
+        
+        checkButton.delegate = self
     }
     
     func setupCheckButton2() {
@@ -52,6 +54,15 @@ class HomeView: UIView {
         checkButton2.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.1).isActive = true
 
         checkButton2.isChecked = false
+        checkButton2.delegate = self
     }
 
+}
+
+extension HomeView: CheckBoxButtonDelegate {
+    func didSelectedButton(isChecked: Bool, sender: CheckBoxButton) {
+        if sender == checkButton2 {
+            print(sender.isChecked)
+        }
+    }
 }
