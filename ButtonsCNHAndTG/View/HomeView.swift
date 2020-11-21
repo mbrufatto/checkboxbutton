@@ -63,6 +63,8 @@ extension HomeView: CheckBoxButtonDelegate {
     func didSelectedButton(isChecked: Bool, sender: CheckBoxButton) {
         if sender == checkButton2 {
             print(sender.isChecked)
+        } else if sender == checkButton {
+            print(sender.isChecked)
         }
     }
 }
